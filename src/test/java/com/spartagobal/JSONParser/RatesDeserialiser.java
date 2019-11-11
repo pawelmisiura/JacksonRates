@@ -1,20 +1,15 @@
-package com.spartagobal.jacksonrates.deserialiserates;
+package com.spartagobal.JSONParser;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class RatesDeserialiser {
     public RatesDTO ratesMapped;
 
-    public RatesDeserialiser(String fileLocation) {
+    public RatesDeserialiser(String jsonString) {
         ObjectMapper objectMapper = new ObjectMapper();
-
         try {
-            ratesMapped = objectMapper.readValue(new FileReader(fileLocation), RatesDTO.class);
+            ratesMapped = objectMapper.readValue(jsonString, RatesDTO.class);
         } catch (IOException e) {
             e.printStackTrace();
         }

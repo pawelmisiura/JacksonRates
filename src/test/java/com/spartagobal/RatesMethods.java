@@ -1,4 +1,6 @@
-package com.spartagobal.jacksonrates.deserialiserates;
+package com.spartagobal;
+
+import com.spartagobal.JSONParser.RatesDeserialiser;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
